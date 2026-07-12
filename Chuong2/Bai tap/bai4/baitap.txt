@@ -1,0 +1,5 @@
+Một dãy số tự nhiên bất kỳ AN = {a1, a2,.., aN} được gọi là một dãy số nguyên tố
+thuần nhất bậc K nếu tổng K phần tử liên tiếp bất kỳ của dãy số AN là một số
+nguyên tố (K N). Ví dụ dãy số AN = {3, 27, 7, 9, 15} là một dãy số nguyên tố thuần
+nhất bậc 3. Cho dãy số AN. Hãy liệt kê tất cả các dãy số nguyên tố thuần nhất bậc
+K có thể có được tạo ra bằng cách tráo đổi các phần tử khác nhau của dãy số AN.

@@ -1,0 +1,16 @@
+[
+  {
+    "label": "DSA Run",
+    "command": "mkdir -p \"$ZED_DIRNAME/.build\" && /usr/bin/clang++ -std=c++17 -O2 -Wall -Wextra -Wshadow -g0 \"$ZED_FILE\" -o \"$ZED_DIRNAME/.build/$ZED_STEM\" && \"$ZED_DIRNAME/.build/$ZED_STEM\"",
+    "cwd": "$ZED_DIRNAME",
+    "save": "current",
+    "reveal": "always",
+  },
+  {
+    "label": "DSA Run with input.txt",
+    "command": "mkdir -p \"$ZED_DIRNAME/.build\" && /usr/bin/clang++ -std=c++17 -O2 -Wall -Wextra -Wshadow -g0 \"$ZED_FILE\" -o \"$ZED_DIRNAME/.build/$ZED_STEM\" && \"$ZED_DIRNAME/.build/$ZED_STEM\" < \"$ZED_DIRNAME/input.txt\" > \"$ZED_DIRNAME/output.txt\" && echo \"--- output.txt ---\" && cat \"$ZED_DIRNAME/output.txt\"",
+    "cwd": "$ZED_DIRNAME",
+    "save": "current",
+    "reveal": "always",
+  },
+]

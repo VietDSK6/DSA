@@ -1,0 +1,3 @@
+Bài tập: Sử dụng thuật toán sinh.
+3. Hãy sử dụng thuật toán sinh (quay lui, nhánh cận, qui hoạch động) viết chương
+trình Viết chương trình tìm X = (x1, x2,..,xn) và f(X) đạt giá trị lớn nhất.
