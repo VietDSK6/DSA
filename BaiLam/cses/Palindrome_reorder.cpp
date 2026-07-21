@@ -2,50 +2,47 @@
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
 
-    string s;
-    cin >> s;
+  string s;
+  cin >> s;
 
-    vector<int> frequency(26, 0);
+  vector<int> frequency(26, 0);
 
-    for (char c : s) {
-        frequency[c - 'A']++;
+  for (char c : s) {
+    frequency[c - 'A']++;
+  }
+
+  int oddCount = 0;
+  char middleCharacter;
+
+  for (int i = 0; i < 26; i++) {
+    if (frequency[i] % 2 == 1) {
+      oddCount++;
+      middleCharacter = char('A' + i);
     }
+  }
 
-    int oddCount = 0;
-    char middleCharacter;
+  if (oddCount > 1) {
+    cout << "NO SOLUTION\n";
+    return 0;
+  }
 
-    for (int i = 0; i < 26; i++) {
-        if (frequency[i] % 2 == 1) {
-            oddCount++;
-            middleCharacter = char('A' + i);
-        }
-    }
+  string leftHalf;
 
-    if (oddCount > 1) {
-        cout << "NO SOLUTION\n";
-        return 0;
-    }
+  for (int i = 0; i < 26; i++) {
+    leftHalf += string(frequency[i] / 2, char('A' + i));
+  }
 
-    string leftHalf;
+  string rightHalf = leftHalf;
+  reverse(rightHalf.begin(), rightHalf.end());
 
-    for (int i = 0; i < 26; i++) {
-        leftHalf += string(
-            frequency[i] / 2,
-            char('A' + i)
-        );
-    }
+  cout << leftHalf;
 
-    string rightHalf = leftHalf;
-    reverse(rightHalf.begin(), rightHalf.end());
+  if (oddCount == 1) {
+    cout << middleCharacter;
+  }
 
-    cout << leftHalf;
-
-    if (oddCount == 1) {
-        cout << middleCharacter;
-    }
-
-    cout << rightHalf << '\n';
+  cout << rightHalf << '\n';
 }
