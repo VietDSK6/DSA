@@ -17,8 +17,7 @@ void Try(int row) {
       x[row] = c;
 
       col[c] = true;
-      diag1[row - c + n] =
-          true;            
+      diag1[row - c + n] = true;
       diag2[row + c] = true;
 
       Try(row + 1);
